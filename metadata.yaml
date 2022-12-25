@@ -1,20 +1,19 @@
 composer:
-  last:
-  first:
-title:
-id:
-genre:
-scoring:
+  last: Tůma
+  first: František Ignác Antonín
+title: Laudes Mariæ resonas
+subtitle: Motetto della Madonna
+genre: motet
+scoring: S, A, T, B (solo), S, A, T, B (coro), cnto, fag, 2 trb, 2 vl, b, org
 license: cc-by-sa-4.0
 sources:
   B1:
-    siglum:
-    shelfmark:
-    date:
-    rism:
-    url:
-    license:
+    siglum: A-Wn
+    shelfmark: Mus.Hs.15719
+    date: 1744
+    rism: 600139013
+    url: https://data.onb.ac.at/rec/AC14297614
+    license: public domain
     principal: true
+    notes: parts for S solo, A solo, T solo, B, solo, S rip, A rip, T rip, B rip, cnto, fag, trb1, trb 2, vl 1, vl 2, vlc, vlne, org, and maestro di cappella
 imslp:
-parts:
-  ottoni: Clarino I, II in C\\Timpani in C–G

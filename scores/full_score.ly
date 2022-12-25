@@ -1,93 +1,87 @@
-\version "2.24.0"
+\version "2.22.0"
 
 \include "../definitions.ly"
 \include "score_settings/full-score.ly"
 
 \book {
   \bookpart {
-    \section "1" "First"
+    \section "Laudes Mariæ resonas"
     \addTocEntry
     \paper { indent = 3\cm }
     \score {
       <<
         \new StaffGroup <<
+          \new Staff {
+            \set Staff.instrumentName = "Cornetto"
+            \LaudesCornetto
+          }
+          \new Staff {
+            \set Staff.instrumentName = "Fagotto"
+            \LaudesFagotto
+          }
+        >>
+        \new StaffGroup <<
           \new GrandStaff <<
-            \set GrandStaff.instrumentName = "Oboe"
+            \set GrandStaff.instrumentName = "Trombone"
             \new Staff {
               \set Staff.instrumentName = "I"
-              \xxxOboeI
+              \LaudesTromboneI
             }
             \new Staff {
               \set Staff.instrumentName = "II"
-              \xxxOboeII
+              \LaudesTromboneII
             }
           >>
         >>
         \new StaffGroup <<
-          \new Staff <<
-            \set Staff.instrumentName = \transposedName "Clarino I, II" "C" ""
-            % \transpose c c
-            \partCombine #'(0 . 10) \xxxClarinoI \xxxClarinoII
-          >>
-        >>
-        \new Staff {
-          \set Staff.instrumentName = \transposedTimp "C" "" "G" ""
-          % \transpose c c
-          \xxxTimpani
-        }
-        \new StaffGroup <<
-          \new GrandStaff \with { \smallGroupDistance } <<
+          \new GrandStaff <<
             \set GrandStaff.instrumentName = "Violino"
             \new Staff {
               \set Staff.instrumentName = "I"
-              \xxxViolinoI
+              \LaudesViolinoI
             }
             \new Staff {
               \set Staff.instrumentName = "II"
-              \xxxViolinoII
+              \LaudesViolinoII
             }
           >>
-          \new Staff {
-            \set Staff.instrumentName = "Viola"
-            \xxxViola
-          }
         >>
         \new ChoirStaff <<
           \new Staff {
             \incipitSoprano
-            \new Voice = "Soprano" { \dynamicUp \xxxSoprano }
+            \new Voice = "Soprano" { \dynamicUp \LaudesSoprano }
           }
-          \new Lyrics \lyricsto Soprano \xxxSopranoLyrics
+          \new Lyrics \lyricsto Soprano \LaudesSopranoLyrics
 
           \new Staff {
             \incipitAlto
-            \new Voice = "Alto" { \dynamicUp \xxxAlto }
+            \new Voice = "Alto" { \dynamicUp \LaudesAlto }
           }
-          \new Lyrics \lyricsto Alto \xxxAltoLyrics
+          \new Lyrics \lyricsto Alto \LaudesAltoLyrics
 
           \new Staff {
             \incipitTenore
-            \new Voice = "Tenore" { \dynamicUp \xxxTenore }
+            \new Voice = "Tenore" { \dynamicUp \LaudesTenore }
           }
-          \new Lyrics \lyricsto Tenore \xxxTenoreLyrics
+          \new Lyrics \lyricsto Tenore \LaudesTenoreLyrics
 
           \new Staff {
             \set Staff.instrumentName = "Basso"
-            \new Voice = "Basso" { \dynamicUp \xxxBasso }
+            \new Voice = "Basso" { \dynamicUp \LaudesBasso }
           }
-          \new Lyrics \lyricsto Basso \xxxBassoLyrics
+          \new Lyrics \lyricsto Basso \LaudesBassoLyrics
         >>
         \new StaffGroup <<
           \new Staff {
             \set Staff.instrumentName = \markup \center-column { "Organo" "e Bassi" }
             % \transpose c c,
-            \xxxOrgano
+            \LaudesOrgano
           }
         >>
-        \new FiguredBass { \xxxBassFigures }
+        \new FiguredBass { \LaudesBassFigures }
       >>
       \layout { }
-      \midi { \tempo 4 = 90 }
+      \midi { \tempo 4 = 80 }
     }
   }
 }

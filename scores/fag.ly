@@ -12,8 +12,8 @@
     \score {
       <<
         \new Staff {
-          \set Staff.instrumentName = "Violino I"
-          \LaudesViolinoI
+          \set Staff.instrumentName = "Fagotto"
+          \LaudesFagotto
         }
       >>
     }
